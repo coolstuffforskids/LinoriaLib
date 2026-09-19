@@ -1,3 +1,6 @@
+ver linoria for rivals
+maked for undtc
+
 # LinoriaLib
 A Roblox UI library inspired by Splix, BBot and many others.
 
