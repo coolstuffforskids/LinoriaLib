@@ -7,7 +7,14 @@ local RunService = game:GetService('RunService')
 local TweenService = game:GetService('TweenService');
 local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
-local Mouse = LocalPlayer:GetMouse();
+--local Mouse = LocalPlayer:GetMouse(); delete bc rivals dtc this
+local Mouse = Vector2.zero
+
+InputService.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        Mouse = input.Position
+    end
+end)
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
